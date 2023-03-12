@@ -38,7 +38,50 @@ namespace CoffeeShopApp.Controllers
 
         public IActionResult HotDrinks()
         {
-            return View();
+            List<HotDrink> hotDrinks = new List<HotDrink>();
+            try
+            {
+                hotDrinks = _unitOfwork.HotDrinks.GetAll().ToList();
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError("Unable to fetch Hot Drinks" + ex.Message);
+            }
+
+            return View(hotDrinks);
+        }
+
+        public IActionResult ColdDrinks()
+        {
+            List<ColdDrink> coldDrinks = new List<ColdDrink>();
+            try
+            {
+                coldDrinks = _unitOfwork.ColdDrinks.GetAll().ToList();
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError("Unable to fetch cold Drinks" + ex.Message);
+            }
+
+            return View(coldDrinks);
+        }
+
+        public IActionResult Food()
+        {
+            List<Food> food = new List<Food>();
+            try
+            {
+                food = _unitOfwork.Foods.GetAll().ToList();
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError("Unable to fetch Food" + ex.Message);
+            }
+
+            return View(food);
         }
 
 

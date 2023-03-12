@@ -1,0 +1,34 @@
+﻿@model IEnumerable<CoffeeShopApp.Models.HotDrink>
+@{
+    ViewData["Title"] = "Hot Drinks";
+    var quantity = 0;
+}
+
+<h1>Hot Drinks</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td><a href="">ADD</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
