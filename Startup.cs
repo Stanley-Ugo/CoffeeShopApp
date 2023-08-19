@@ -9,9 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CoffeeShopApp
 {
@@ -36,6 +33,13 @@ namespace CoffeeShopApp
 
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout as needed
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +58,8 @@ namespace CoffeeShopApp
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

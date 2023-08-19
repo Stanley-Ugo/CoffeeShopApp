@@ -1,9 +1,5 @@
 ﻿using CoffeeShopApp.Models.DatabaseContext;
 using CoffeeShopApp.Repository.Implementation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CoffeeShopApp.Repository.UnitOfWork
 {

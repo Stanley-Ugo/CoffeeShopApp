@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CoffeeShopApp.Models
 {
@@ -18,6 +15,7 @@ namespace CoffeeShopApp.Models
 
         [ForeignKey("UserId")]
         public virtual Users Users { get; set; }
+        public int OderId { get; set; }
         public decimal TotalCost { get; set; }
         public DateTime OrderDate { get; set; }
     }

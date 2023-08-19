@@ -433,3 +433,6 @@ C:\Projects\CoffeeShopApp\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-
 C:\Projects\CoffeeShopApp\obj\Debug\net5.0\Razor\Views\Home\HotDrinks.cshtml.g.cs
 C:\Projects\CoffeeShopApp\obj\Debug\net5.0\Razor\Views\Home\ColdDrinks.cshtml.g.cs
 C:\Projects\CoffeeShopApp\obj\Debug\net5.0\Razor\Views\Home\Food.cshtml.g.cs
+C:\Projects\CoffeeShopApp\obj\Debug\net5.0\Razor\Views\Home\ViewOrderItems.cshtml.g.cs
+C:\Projects\CoffeeShopApp\obj\Debug\net5.0\Razor\Views\Home\CheckOut.cshtml.g.cs
+C:\Projects\CoffeeShopApp\obj\Debug\net5.0\Razor\Views\Home\OrderHistory.cshtml.g.cs

@@ -24,11 +24,17 @@
                     <td>@item.Name</td>
                     <td>@item.Description</td>
                     <td>@item.Price</td>
-                    <td><a href="">ADD</a></td>
+                    <td><a href="@Url.Action("AddFoodToOrderItem", "Home", new { id = item.Id })">ADD</a></td>
                 </tr>
             }
         }
+
     </tbody>
 </table>
+
+@Html.ActionLink("Back to MENU", "Menu", "Home", null, new { @class = "btn btn-primary" })
+
+
+@Html.ActionLink("Check out", "ViewOrderItems", "Home", null, new { @class = "btn btn-primary" })
 
 

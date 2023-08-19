@@ -23,21 +23,21 @@ namespace CoffeeShopApp.Models
 
         // Foreign key   
         [Display(Name = "Hot Drink")]
-        public int HotDrinkId { get; set; }
+        public int? HotDrinkId { get; set; }
 
         [ForeignKey("HotDrinkId")]
         public virtual HotDrink HotDrinks { get; set; }
 
         // Foreign key   
         [Display(Name = "Cold Drink")]
-        public int ColdDrinkId { get; set; }
+        public int? ColdDrinkId { get; set; }
 
         [ForeignKey("ColdDrinkId")]
         public virtual ColdDrink ColdDrinks { get; set; }
 
         // Foreign key   
         [Display(Name = "Food")]
-        public int FoodId { get; set; }
+        public int? FoodId { get; set; }
 
         [ForeignKey("FoodId")]
         public virtual Food Foods { get; set; }
